@@ -1,0 +1,66 @@
+[0m19:54:04.081388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a81e3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c976e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c976ec0>]}
+
+
+============================== 19:54:04.089389 | 650d3fa2-0f1b-43d8-841c-dae6b58911e2 ==============================
+[0m19:54:04.089389 [info ] [MainThread]: Running with dbt=1.7.6
+[0m19:54:04.090408 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/eric/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init northwinds_dbt', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:54:04.091254 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/eric/.dbt')}
+[0m19:54:04.091904 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m19:54:04.093467 [debug] [MainThread]: Starter project path: /Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m19:54:04.102258 [info ] [MainThread]: 
+Your new dbt project "northwinds_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:54:04.103314 [info ] [MainThread]: Setting up your profile.
+[0m19:54:13.525198 [error] [MainThread]: Encountered an error:
+
+[0m19:54:13.530161 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/venv/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m19:54:13.543271 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 9.489625, "process_user_time": 2.843403, "process_kernel_time": 0.293415, "process_mem_max_rss": "97927168", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:54:13.544931 [debug] [MainThread]: Command `dbt init` failed at 19:54:13.544617 after 9.49 seconds
+[0m19:54:13.545652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a81e3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c977250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c976e30>]}
+[0m19:54:13.546397 [debug] [MainThread]: Flushing usage events
+[0m20:56:44.782618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eaa7670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e5f60e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bb7970>]}
+
+
+============================== 20:56:44.788988 | 98a476ac-c983-4f13-8c1b-72e4e89cf524 ==============================
+[0m20:56:44.788988 [info ] [MainThread]: Running with dbt=1.7.6
+[0m20:56:44.789861 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/eric/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m20:56:44.790732 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/eric/Data Engineering/week of 1_29/DBT/dbt-core-setup-northwinds/codebase/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:56:44.794703 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 0.08837826, "process_user_time": 2.61221, "process_kernel_time": 0.33097, "process_mem_max_rss": "98742272", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:56:44.796210 [debug] [MainThread]: Command `dbt compile` failed at 20:56:44.795939 after 0.09 seconds
+[0m20:56:44.796873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eaa7670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bb65f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bb7400>]}
+[0m20:56:44.797504 [debug] [MainThread]: Flushing usage events
