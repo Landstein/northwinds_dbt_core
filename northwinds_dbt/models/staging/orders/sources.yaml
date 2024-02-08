@@ -1,0 +1,8 @@
+version: 1
+sources:
+  - name: core
+    database: northwinds
+    schema: public
+    tables:
+    - name: orders
+    - name: order_details
